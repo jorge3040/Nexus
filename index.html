@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Negocio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #4682B4, #f0f8ff);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .section {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 300px;
+        }
+        .header, .products, .contact, .payment {
+            text-align: center;
+        }
+        .header img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .read-more {
+            color: #4682B4;
+            cursor: pointer;
+        }
+        .product img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 15px;
+            transition: transform 0.2s;
+        }
+        .product img:hover {
+            transform: scale(1.1);
+        }
+        .logos img {
+            width: 20px;
+            vertical-align: middle;
+        }
+        .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+        }
+        .vertical-list .logos {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+        @media (max-width: 600px) {
+            .social-icons img {
+                width: 20px;
+                margin: 0 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section header">
+            <img src="portada.jpg" alt="Portada de la compañía">
+            <p>Descripción inicial de la compañía... <span class="read-more" onclick="toggleText('desc1')">Leer más</span></p>
+            <p id="desc1" style="display:none;">Descripción completa de la compañía...</p>
+        </div>
+        <div class="section products">
+            <div class="product">
+                <img src="producto1.jpg" alt="Producto 1">
+                <p>Producto 1 - Precio: $XX.XX <span class="read-more" onclick="toggleText('prod1')">Leer más</span></p>
+                <p id="prod1" style="display:none;">Descripción completa del Producto 1...</p>
+            </div>
+            <div class="product">
+                <img src="producto2.jpg" alt="Producto 2">
+                <p>Producto 2 - Precio: $XX.XX <span class="read-more" onclick="toggleText('prod2')">Leer más</span></p>
+                <p id="prod2" style="display:none;">Descripción completa del Producto 2...</p>
+            </div>
+            <div class="product">
+                <img src="producto3.jpg" alt="Producto 3">
+                <p>Producto 3 - Precio: $XX.XX <span class="read-more" onclick="toggleText('prod3')">Leer más</span></p>
+                <p id="prod3" style="display:none;">Descripción completa del Producto 3...</p>
+            </div>
+        </div>
+        <div class="section contact">
+            <p class="logos"><img src="email_logo.png" alt="Email"> Correo electrónico: example@example.com</p>
+            <p class="logos"><img src="phone_logo.png" alt="Teléfono"> Números de teléfono: 123-456-7890</p>
+            <div class="social-icons">
+                <p>Redes Sociales:</p>
+                <a href="https://www.facebook.com" target="_blank"><img src="facebook_logo.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="instagram_logo.png" alt="Instagram"></a>
+                <a href="https://www.tiktok.com" target="_blank"><img src="tiktok_logo.png" alt="TikTok"></a>
+            </div>
+        </div>
+        <div class="section payment vertical-list">
+            <p class="logos"><img src="banesco_logo.png" alt="Banesco"> Banesco</p>
+            <p class="logos"><img src="mercantil_logo.png" alt="Mercantil"> Mercantil</p>
+            <p class="logos"><img src="bancaamiga_logo.png" alt="Banca Amiga"> Banca Amiga</p>
+        </div>
+    </div>
+    <script>
+        function toggleText(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

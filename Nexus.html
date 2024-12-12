@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS-STORE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+            color: #00BFFF;
+        }
+        .container {
+            max-width: 1900px;
+            margin: auto;
+            padding: 60px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background: #fff;
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #00BFFF;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .navbar a:hover {
+            background: #00BFFF;
+            color: white;
+            border-radius: 5px;
+        }
+        .section {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            color: #00BFFF;
+        }
+        .header, .products, .contact, .payment {
+            text-align: center;
+        }
+        .header img {
+            width: 100%;
+            max-height: 1200px;
+            object-fit: cover;
+            border-radius: 80px;
+        }
+        .read-more {
+            color: #00BFFF;
+            cursor: pointer;
+        }
+        .product {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .product img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 15px;
+            transition: transform 0.2s;
+        }
+        .product img:hover {
+            transform: scale(1.1);
+        }
+        .product .details {
+            flex: 1;
+            padding: 10px;
+        }
+        .logos img {
+            width: 150px;
+            vertical-align: center;
+        }
+        .social-icons img {
+            width:30px;
+            margin: 0 10px;
+
+
+        }
+        .vertical-list .logos {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+        @media (max-width: 30px) {
+            .social-icons img {
+                width: 30px;
+                margin: 0 5px;
+            }
+            .product {
+                flex-direction: column;
+            }
+        }
+
+     
+    </style>
+</head>
+<body>
+    <div>
+</div>
+    <div class="container">
+        <div class="navbar">
+            <a href="#" onclick="showSection('header')">Inicio</a>
+            <a href="#" onclick="showSection('products')">Productos</a>
+            <a href="#" onclick="showSection('contact')">Contacto</a>
+            <a href="#" onclick="showSection('payment')">Métodos de Pago</a>
+        </div>
+        <div class="section header" id="header">
+            <img src="Portada de nuestra cuenta de Nexus.jpg" alt="Portada de la compañía">
+            <p><b>Somos un negocio asociado a la compra y venta de productos electronicos que buscan satisfacer las necesidades y las comodidades de nuestros clientes, por medio de su buena calidad, envios por encargo y entregas personales en sitios acordados.<br></b><span class="read-more" onclick="toggleText('desc1')">Leer más</span></p>
+            <p id="desc1" style="display:none;"><b>Si desean saber mas sobre nosotros, pueden seguirnos en nuestras redes sociales y contactarnos por nuestro número de WhatsApp para estar al tanto sobre los productos que estamos vendiendo y demas contenido que estaremos publicando</b></p>
+        </div>
+        <div class="section products" id="products">
+            <div class="product">
+                <img src="Foto del Drone.jpg" alt="Producto 1">
+                <div class="details">
+                    <h2><b>DRONE K101 MAX - Precio: 35.00$</b> <span class="read-more" onclick="toggleText('prod1')">Leer más</span></h2>
+                    <p id="prod1" style="display:none;">¡El drone de introducción más equipado y completo!
+
+Integra tecnología avanzada que mejora el vuelo, haciéndolo más seguro y eficiente. Entre sus características principales destaca la implementación del sistema OFS "Estabilización de Flujo Óptico" que dará una estabilidad perfecta por medio de un sensor cámara inferior.
+
+ 
+
+El gran detalle que añade mucho valor a éste increíble drone: Equipado con una Cámara frontal ESC. Implementa un motor para poder mover la cámara de manera remota.
+
+ 
+
+Cuenta con luces LED bajo magnificador para realizar vuelos nocturnos sin perder funcionalidades en los sensores.
+
+Nuestra serie de drones básicos: los mejores entrenadores para movimientos y grabación de video y fotografía.</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Foto del Gps.jpg" alt="Producto 2">
+                <div class="details">
+                    <h2><b>MINI GPS GFO7 - Precio: 3.00$</b><span class="read-more" onclick="toggleText('prod2')">Leer más</span></h2>
+                    <p id="prod2" style="display:none;">El Mini GPS GF-07 es un localizador compacto y eficiente que utiliza tecnología GSM/GPRS para rastrear la ubicación de objetos o personas en tiempo real. Con un diseño pequeño y discreto, es ideal para proteger tus pertenencias o mantener seguros a tus seres queridos. ¡No pierdas de vista lo que más te importa!</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Foto de las luces.jpg" alt="Producto 3">
+                <div class="details">
+                    <h2><b>LUCES LED H4- Precio: 8.00$</b><span class="read-more" onclick="toggleText('prod3')">Leer más</span></h2><if >
+                    <p id="prod3" style="display:none;">El KIT de LED C6 de nueva generación fabricado con una estructura de aluminio con difusor y ventilador turbo de enfriamiento, garantiza la temperatura óptima para la durabilidad del LED, su tecnología LED tipo COB de alta potencia, ofrece mayor visibilidad que con tus focos de halógeno actuales (hasta 300%), además cuenta con un balastro para aumentar la potencia y regular los picos de voltaje.
+
+CARACTERÍSTICAS PRINCIPALES
+– Potencia: 7600 lumens por lámpara (15200 por par)
+– Vida util: 30.000 horas
+– Temperatura: 6000k
+– Color de luz: Blanca
+– Consumo: 72w (el par)
+– Bivoltaje: 12/24v
+– Encendido: Instantáneo
+– Refrigeración: Cooler en la base</p>
+                </div>
+            </div>
+        </div>
+        <div class="section contact" id="contact">
+            <h4> Correo electrónico: example@example.com</h4>
+            <h4> Números de teléfono:<br>04127401944<br>04120637766 </h4>
+            <div class="logos">
+                <p>Redes Sociales:</p>
+                <a href="https://www.facebook.com" target="_blank"><img src="Facebook.jpg" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="Logo de Instagram.PNG" alt="Instagram"></a>
+                <a href="https://www.tiktok.com" target="_blank"><img src="Tiktok.jpg" alt="TikTok"></a>
+            </div>
+        </div>
+        <div class="section payment vertical-list" id="payment">
+            <p class="logos"><img src="Logo de Banesco.PNG" alt="Banesco"></p><h3 tex align="left">
+<b><i>Pago-movil en Bs - $</i></b>
+<br><br>
+<b><i>Tranferencias en Bs - $</i></b></h3>
+            <p class="logos"><img src="Banco_Mercantil_Logo.PNG" alt="Mercantil"></p><h3 tex align="left">
+<b><i>Pago-movil en Bs - $</i></b>
+<br><br>
+<b><i>Tranferencias en Bs - $</i></b></h3>
+            <p class="logos"><img src="Logo-Bancamiga.JPG" alt="Banca Amiga"></p><h3 tex align="left">
+<b><i>Pago-movil en Bs - $</i></b>
+<br><br>
+<b><i>Tranferencias en Bs - $</i></b></h3>
+        </div>
+    </div>
+    <script>
+        function toggleText(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+        function showSection(id) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(id).style.display = 'block';
+        }
+        // Mostrar la sección inicial por defecto
+        showSection('header');
+    </script>
+</body>
+</html>
+
+
